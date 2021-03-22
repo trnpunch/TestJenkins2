@@ -1,0 +1,36 @@
+key:
+  field_name: "key"
+  key_is_invalid: "The key field is invalid."
+
+version:
+  field_name: "version"
+  version_is_invalid: "The version format is invalid."
+  version_is_required: "The version field is required."
+
+os:
+  field_name: "os"
+  os_is_invalid: "The selected os is invalid."
+  os_is_required: "The os field is required."
+
+promotion_id:
+  field_name: "id"
+  promotion_id_is_invalid: "The id must be uuid."
+
+accept_language:
+  field_name: "accept-language"
+  accept_language_is_invalid: "The accept-language field is invalid."
+
+promotion_type:
+  field_name: "type"
+  promotion_type_is_invalid: "The selected type is invalid."
+
+promotion_limit:
+  field_name: "limit"
+  promotion_limit_is_invalid: "The limit field must be between -1 and 100."
+  promotion_limit_is_invalid_format: "The limit must be a number."
+  promotion_limit_is_required: "The limit field is required."
+
+promotion_offset:
+  field_name: "offset"
+  promotion_offset_is_invalid: "The offset must be a number."
+  promotion_offset_is_required: "The offset field is required."

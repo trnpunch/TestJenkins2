@@ -1,0 +1,19 @@
+uri:
+  info:
+    get_address: "/info/addresses"
+    get_app_setting_url: "/info/settings"
+    get_voucher: "/info/vouchers"
+    get_display_feature_status: "/info/feature"
+  version:
+    check_version: "/version/check"
+  promotion:
+    get_promotion: "/promotions"
+  cc_card:
+    get_cc_card_info: "/cards"
+
+language:
+  th: "th"
+  en: "en"
+  invalid: "TH"
+
+invalid_access_key: "cL1wvTEJcL3d6UFdZQUk4WlR1XC84S1Naa"

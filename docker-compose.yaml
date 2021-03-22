@@ -1,0 +1,14 @@
+version: "3"
+services:
+
+  test:
+    image: ${TEST_IMAGE:-robot-framework}:${TEST_IMAGE_TAG:-latest}
+    network_mode: host
+    environment:
+      ROBOT_THREADS: 1
+      ROBOT_OPTIONS: -x result -v ENV:${TEST_ENV:-local} -i ${TEST_TAG:-acceptance}
+    volumes:
+      - ${TEST_PATH:-.}:/opt/robotframework/tests
+      - ${TEST_PATH:-.}/reports:/opt/robotframework/reports
+    working_dir: /opt/robotframework/temp
+    command: /bin/sh -c "tail -f /dev/null"
