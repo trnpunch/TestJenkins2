@@ -11,7 +11,7 @@ send request to get cc card info using get method with key
   ...  X-Request-Id=rb-${x-request-id}
   ...  Key=${key}
   ${response}=  get request  oneapp_bff_service  ${uri.cc_card.get_cc_card_info}  headers=${headers}
-  [Return]  ${response}
+  [Return]  ${response};;;;;
 
 send request to get cc card info using get method without key
   ${x-request-id}=  generate x-request id
