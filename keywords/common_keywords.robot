@@ -13,6 +13,13 @@ error response body should return error detail with code, field and msg
   should be equal as integers  ${actual_response_body}[code]  ${${expected_error_code}}
   should be equal as strings  ${actual_response_body}[error][${expected_error_field}][0]  ${expected_error_msg}
 
+error response body should return error detail with code, field and multiple msg
+  [Arguments]  ${response}  ${expected_error_code}  ${expected_error_field_1}  ${expected_error_msg_1}  ${expected_error_field_2}  ${expected_error_msg_2}
+  ${actual_response_body}=  set variable  ${response.json()}
+  should be equal as integers  ${actual_response_body}[code]  ${${expected_error_code}}
+  should be equal as strings  ${actual_response_body}[error][${expected_error_field_1}][0]  ${expected_error_msg_1}
+  should be equal as strings  ${actual_response_body}[error][${expected_error_field_2}][0]  ${expected_error_msg_2}
+
 error response body should return error detail with code and error
   [Arguments]  ${response}  ${expected_error_code}  ${expected_error}
   ${actual_response_body}=  set variable  ${response.json()}
